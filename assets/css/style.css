@@ -7843,8 +7843,9 @@ xclip
     Header Area Styles 
 -----------------------------*/
 
-
-
+/*---------------------------
+    Header Area Styles 
+-----------------------------*/
 body.template-color-1 {
   background-color: #212428; }
 
@@ -8182,6 +8183,29 @@ body.template-color-1 {
     font-size: 32px;
     color: var(--color-primary); }
 
+
+    .primary-menu .nav-item:last-child {
+      margin-top: 50px; }
+    /* Styling the resume button */
+.primary-menu .nav-item a button {
+  background-color: #d43030;  /* Blue background */
+  color: white;               /* White text */
+  border: none;               /* Remove default border */
+  padding: 8px 16px;          /* Add padding for button */
+  font-size: 14px;            /* Text size */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effect */
+  cursor: pointer;           /* Pointer cursor for the button */
+}
+
+/* Hover effect for the button */
+.primary-menu .nav-item a button:hover {
+  background-color: #cc1010;  /* Darker blue on hover */
+}
+
+/* Active state for the button */
+.primary-menu .nav-item a button.active {
+  background-color: #470202;  /* Even darker blue when active */
+}
 /*--------------------------
     Navigation Styles  
 ----------------------------*/
@@ -9039,11 +9063,27 @@ figcaption {
     padding: 0;
 }
 
+/* Adjusting the header size */
 .header-left {
-    display: flex;
-    justify-content:top;
-    align-items: top;
-    height: 15vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+/* Logo styling */
+.header-left .logo img {
+  width: 70%;  /* Adjust logo size relative to the parent container */
+  max-width: 120px;  /* Set a maximum size for the logo */
+  height: auto;  /* Maintain the aspect ratio */
+}
+
+/* For smaller screens */
+@media (max-width: 768px) {
+  .header-left .logo img {
+      width: 60%;  /* Reduce logo size on smaller screens */
+      max-width: 100px;  /* Smaller max-width */
+  }
 }
 
 
@@ -9381,20 +9421,12 @@ figcaption {
       border-radius: 6px; }
     .slide .thumbnail .inner {
       text-align: center; }
-      .slide .thumbnail .inner {
-        position: absolute;  
-        bottom: -120px;  
-        left: 90px;                   /* Aligns the left of the image container with the left of the screen */
-        padding: 1px;             /* Optional padding around the image */
-    }
     
-    .slide .thumbnail .inner img {
-        max-width: 570%;            /* Image scales to 70% of its container width */
-        height: 340px;             /* Fixed height of 400px */
-        object-fit: cover;         /* Maintains aspect ratio and crops the image to fit height */
-        border-radius: 50%;         /* Rounded corners with 5% radius */
-        display: block;            /* Ensures image is a block element */
-    }
+      .slide .thumbnail .inner img {
+        border: 0;
+        vertical-align: middle;
+        max-width: 100%;
+        height: auto; }
     
     .slide .thumbnail.box-gradient::before {
       width: 100%;
@@ -10869,6 +10901,8 @@ div#featured-project-carousel {
       overflow: visible;
       position: relative;
       border-radius: 14px;
+      background: #f02981;
+      background: linear-gradient(145deg, #f02981 0%, #c81901 100%);
       }
       .progress-charts .progress .progress-bar span.percent-label {
         position: absolute;
@@ -12865,6 +12899,7 @@ div#featured-project-carousel {
 /*---------------------------
     Portfolio Area Styles 
 -----------------------------*/
+
 .rn-portfolio,
 .rn-blog {
   text-align: left;
