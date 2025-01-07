@@ -8188,7 +8188,7 @@ body.template-color-1 {
       margin-top: 50px; }
     /* Styling the resume button */
 .primary-menu .nav-item a button {
-  background-color: #d43030;  /* Blue background */
+  background-color: #f9004d;  /* Blue background */
   color: white;               /* White text */
   border: none;               /* Remove default border */
   padding: 8px 16px;          /* Add padding for button */
@@ -8202,10 +8202,7 @@ body.template-color-1 {
   background-color: #cc1010;  /* Darker blue on hover */
 }
 
-/* Active state for the button */
-.primary-menu .nav-item a button.active {
-  background-color: #470202;  /* Even darker blue when active */
-}
+
 /*--------------------------
     Navigation Styles  
 ----------------------------*/
